@@ -1,5 +1,5 @@
 from methods.selection import EliteSelection, RouletteSelection, BoltzmannSelection,UniversalSelection, RankingSelection, DeterministicTournamentSelection, ProbabilisticTournamentSelection
-from methods.crossover import OnePointCrossover
+from methods.crossover import OnePointCrossover, TwoPointCrossover, UniformCrossover, AnnularCrossover
 from methods.mutation import GeneMutation, UniformMutation, NoUniformMutation
 from methods.survival import AdditiveSurvival, ExclusiveSurvival
 
@@ -34,7 +34,13 @@ class MethodFactory:
         method_name = method_name.lower()
         if method_name == "one_point":
             return OnePointCrossover()
-        # Agregar cruce dos puntos, uniforme, anular, etc.
+        elif method_name == "two_point":
+            return TwoPointCrossover()
+        elif method_name == "uniform":
+            p = kwargs.get('probability', 0.5)
+            return UniformCrossover(p)
+        elif method_name == "annular" or method_name == "anular":
+            return AnnularCrossover()
         raise ValueError(f"Crossover method '{method_name}' not supported.")
 
     @staticmethod
