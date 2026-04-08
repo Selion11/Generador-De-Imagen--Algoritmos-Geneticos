@@ -1,6 +1,6 @@
-# SIA-TP2
 
-### ALGORITMO GENETICO: APROXIMACION DE IMAGENES CON TRIANGULOS
+
+# ALGORITMO GENETICO: APROXIMACION DE IMAGENES CON TRIANGULOS
 
 Este proyecto implementa un motor de Algoritmos Genéticos (AG) diseñado para replicar una imagen objetivo utilizando una cantidad limitada de triángulos superpuestos y semitransparentes. Es la solución correspondiente al Trabajo Práctico de Algoritmos Geneticos para la materia Sistemas de Inteligencia Artificial.
 
